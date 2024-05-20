@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="FileManager" customModuleProvider="target">
+            <connections>
+                <outlet property="leftButton" destination="MzB-I0-eVv" id="xjz-0U-74p"/>
+                <outlet property="rightButton" destination="cVK-Z6-fi8" id="vHY-jB-LG2"/>
+                <outlet property="titleLabel" destination="Jhi-zm-Whm" id="ZUt-TI-uan"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FileManager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-zm-Whm">
+                    <rect key="frame" x="151" y="15.333333333333334" width="91.333333333333314" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVK-Z6-fi8">
+                    <rect key="frame" x="361" y="14" width="20" height="22"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="arrow.right" catalog="system"/>
+                    <connections>
+                        <action selector="didTapRightButton:" destination="-1" eventType="touchUpInside" id="5xv-I7-JVy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzB-I0-eVv">
+                    <rect key="frame" x="12" y="14" width="20" height="22"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="arrow.left" catalog="system"/>
+                    <connections>
+                        <action selector="didTapLeftButton:" destination="-1" eventType="touchUpInside" id="ZSe-nv-fnK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cVK-Z6-fi8" secondAttribute="trailing" constant="12" id="73A-2O-Tji"/>
+                <constraint firstItem="Jhi-zm-Whm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="K6S-VR-Q7w"/>
+                <constraint firstItem="MzB-I0-eVv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yde-Bc-IFo"/>
+                <constraint firstItem="MzB-I0-eVv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="dXg-gj-Czv"/>
+                <constraint firstItem="cVK-Z6-fi8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ps5-W5-0ch"/>
+                <constraint firstItem="Jhi-zm-Whm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vJo-BJ-CMI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="136.64122137404578" y="302.11267605633805"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+    </resources>
+</document>
