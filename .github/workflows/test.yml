@@ -1,0 +1,34 @@
+name: GitHub Actions Demo
+
+on:
+  push:
+   branches:
+    - test_okue
+
+jobs:
+  echo_hello_world:
+    runs-on: macos-latest
+    steps:
+      - run: echo "hello world!!"
+      - name: "挨拶"
+        run: echo "My Name is Taro!!"
+  echo_Okue:
+     runs-on: macos-latest
+     steps:
+      - uses: actions/checkout@v2
+      - run: echo "おくえ！！"
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - name: Show Xcode version
+        run: xcodebuild -version
+      - name: Clear Derived Data
+        run: rm -rf ~/Library/Developer/Xcode/DerivedData
+      - name: Xcode build
+        run: set -o pipefail &&
+            xcodebuild
+            -scheme FileManager
+            -sdk iphonesimulator
+            -configuration Debug
+            build
+            | bundle exec xcpretty
